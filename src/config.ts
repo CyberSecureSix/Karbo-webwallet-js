@@ -1,44 +1,43 @@
+"use strict";
 //export {};
 let global : any = typeof window !== 'undefined' ? window : self;
 global.config = {
 	apiUrl: [
-        "https://wallet.karbo.org/api/"
+        "https://wallet.cybersecuresix.com/api/"
     ],
     nodeList: [
-        "https://karbo.club/services/node_web/"
+        "https://api.cybersecuresix.com/"
     ],
-	nodeUrl: "",
-	mainnetExplorerUrl: "http://explorer.karbowanec.com/",
-	mainnetExplorerUrlHash: "http://explorer.karbowanec.com/?hash={ID}#blockchain_transaction",
-	mainnetExplorerUrlBlock: "http://explorer.karbowanec.com/?hash={ID}#blockchain_block",
-	testnetExplorerUrl: "http://testnet.karbo.org/",
-	testnetExplorerUrlHash: "http://testnet.karbo.org/?hash={ID}#blockchain_transaction",
-	testnetExplorerUrlBlock: "http://testnet.karbo.org/?hash={ID}#blockchain_block",
+	nodeUrl: "https://api.cybersecuresix.com/",
+	mainnetExplorerUrl: "http://explorer.cybersecuresix.com/",
+	mainnetExplorerUrlHash: "http://explorer.cybersecuresix.com/?hash={ID}#blockchain_transaction",
+	mainnetExplorerUrlBlock: "http://explorer.cybersecuresix.com/?hash={ID}#blockchain_block",
+	testnetExplorerUrl: "http://testnet.cybersecuresix.com/",
+	testnetExplorerUrlHash: "http://testnet.cybersecuresix.com/?hash={ID}#blockchain_transaction",
+	testnetExplorerUrlBlock: "http://testnet.cybersecuresix.com/?hash={ID}#blockchain_block",
 	testnet: false,
-    coinUnitPlaces: 12,
+    coinUnitPlaces: 2,
     coinDisplayUnitPlaces: 2,
-	txMinConfirms: 10,
+	txMinConfirms: 6,
 	txCoinbaseMinConfirms: 10,
-	addressPrefix: 111,
-	integratedAddressPrefix: 112,
-	addressPrefixTestnet: 111,
-	integratedAddressPrefixTestnet: 112,
-	subAddressPrefix: 113,
-	subAddressPrefixTestnet: 113,
-	coinFee: new JSBigInt('100000000000'),
-	feePerKB: new JSBigInt('100000000000'), //for testnet its not used, as fee is dynamic.
-	dustThreshold: new JSBigInt('100000000'),//used for choosing outputs/change - we decompose all the way down if the receiver wants now regardless of threshold
+	addressPrefix: 150,
+	integratedAddressPrefix: 151,
+	addressPrefixTestnet: 150,
+	integratedAddressPrefixTestnet: 151,
+	subAddressPrefix: 152,
+	subAddressPrefixTestnet: 152,
 	defaultMixin: 0, // default value mixin
-
+	coinFee: new JSBigInt('100'),
+	feePerKB: new JSBigInt('100'), //for testnet its not used, as fee is dynamic.
+	dustThreshold: new JSBigInt('1'),//used for choosing outputs/change - we decompose all the way down if the receiver wants now regardless of threshold
 	idleTimeout: 30,
 	idleWarningDuration: 20,
 	syncBlockCount: 50,
-
-	coinSymbol: 'KRB',
-	openAliasPrefix: "krb",
-	coinName: 'Karbo',
-	coinUriPrefix: 'karbowanec:',
-	avgBlockTime: 240,
+	coinSymbol: 'SSIX',
+	openAliasPrefix: "ssix",
+	coinName: 'SSIX',
+	coinUriPrefix: 'ssix:',
+	avgBlockTime: 60,
 	maxBlockNumber: 500000000,
 };
 let randInt = Math.floor(Math.random() * Math.floor(config.nodeList.length));

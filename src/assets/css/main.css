@@ -136,7 +136,7 @@ body.menuHidden #menu {
 }
 
 #menu{
-	background: #30466C;
+	background: #141414;
 	color: white;
 	padding:10px 15px;
 }
@@ -491,9 +491,9 @@ body.transparent #copyright{
 	min-height:100vh;
 	position: relative;
 	text-align: center;
-	background-image: -webkit-linear-gradient(rgba(62, 75, 92, 0.70), rgba(62, 75, 92, 0.70)), url(../img/landing/balancing.jpg);
-	background-image: -o-linear-gradient(rgba(62, 75, 92, 0.70), rgba(62, 75, 92, 0.70)), url(../img/landing/balancing.jpg);
-	background-image: linear-gradient(rgba(62, 75, 92, 0.70), rgba(62, 75, 92, 0.70)), url(../img/landing/balancing.jpg);
+	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url(../img/landing/balancing.jpg);
+	background-image: -o-linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url(../img/landing/balancing.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url(../img/landing/balancing.jpg);
 	background-position: center center;
 	background-size: cover;
 	margin-bottom:0px;
